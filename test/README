@@ -1,0 +1,46 @@
+ if (!isnan(temp) && !isnan(hum))
+    {
+      //releu 1
+      if (temp <= data.tempNoapte1 - data.histe1)
+      {
+        pinWrite(PIN_RELEU_1, ON);
+      }
+      else if (temp >= data.tempNoapte1)
+      {
+        pinWrite(PIN_RELEU_1, OFF);
+      }
+      //releu 2
+      if (temp <= data.tempNoapte2 - data.histe2)
+      {
+        pinWrite(PIN_RELEU_2, ON);
+      }
+      else if (temp >= data.tempNoapte2)
+      {
+        pinWrite(PIN_RELEU_2, OFF);
+      }
+      //releu 3
+      if (hum <= data.humNoapte3 - data.histe3)
+      {
+        pinWrite(PIN_RELEU_3, ON);
+      }
+      else if (hum >= data.humNoapte3)
+      {
+        pinWrite(PIN_RELEU_3, OFF);
+      }
+      //releu 4
+      if (hum <= data.humNoapte4 - data.histe4)
+      {
+        pinWrite(PIN_RELEU_4, ON);
+      }
+      else if (hum >= data.humNoapte4)
+      {
+        pinWrite(PIN_RELEU_4, OFF);
+      }
+    }
+    else
+    {
+      pinWrite(PIN_RELEU_1, OFF);
+      pinWrite(PIN_RELEU_2, OFF);
+      pinWrite(PIN_RELEU_3, OFF);
+      pinWrite(PIN_RELEU_4, OFF);
+    }
