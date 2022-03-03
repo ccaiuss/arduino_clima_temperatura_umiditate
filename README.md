@@ -1,2 +1,2 @@
-![Clima](/Clima.drawio.png.png)
+![Clima](/Clima.drawio.png)
 
